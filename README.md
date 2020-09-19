@@ -1,2 +1,2 @@
-# Integrations POC
+# Integrations POC [![Build Status](https://travis-ci.com/mivanilov/integrations-poc.svg?branch=master)](https://travis-ci.com/mivanilov/integrations-poc) [![Coverage Status](https://coveralls.io/repos/github/mivanilov/integrations-poc/badge.svg?branch=master)](https://coveralls.io/github/mivanilov/integrations-poc?branch=master) 
 Here I try out random integrations.
