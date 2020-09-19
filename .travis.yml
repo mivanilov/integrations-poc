@@ -2,3 +2,10 @@ language: java
 
 jdk:
   - openjdk11
+
+env:
+  global:
+    secure: ql2DFpsIFZ4QxIOMhWAXAanJrdzQ2IwUbxg9fXumc/P+sBi4L087vA+LjLicbHoHvXafVFxh0zAJPCtVYu7Z30CZLey//kKV8Ppzc92JtD/GAF9mk/r33uPXzj+Q5fw+A8ra+pgD7XYTgpKc7Pf+B5Z6aYhMGNUxVjPvtNNdGlGPHrNbOszO91nss3wlpBbEPhqdPq5uAIrHs+F0eKIb+RxbOGGaVMWYaWgC6QdfsSN/p4jOnW7x779DIvE9eFsL0VarMGnIzY99yqtHaMGN1qTADDzUA/TAFKW13kUYufHbRC8HOq4VubVtqzWZrzpPryObSxX3CFthBWLV4tyIoScsijP7NkQS6l/uuuaOVu9u+rlqajCr5IIHDaCPxmnH7Xfp68Z+YPCCKRQTjmu+EHviMbg3wg9mSE8yIaexua+JXvTV7PtqL8Zczw2iP3QDeqjTOxMo9sXHIks5/0d7iU5mT/XerAAvUwCeGviX6BPgXcBiNyuaTw2gAQW0HfIWF76w69aWWJ7Gn7XU6ELFEBpuqEXv3MenKyvSMTkYEEAgw9EOa+/J0J5FbhlH+p3LlS4oQ65nA6+uMo0qb3mblMXMIyikk8pGzuv38uuyTwEfJWz6w350F54ggOA8sRxGLdlZ4+Ik5FCVeor0DIWfAZPNdO1a3BW9heab6xWnbmU=
+
+after_success:
+  - mvn clean test jacoco:report coveralls:report -DrepoToken=${COVERALLS_TOKEN}
